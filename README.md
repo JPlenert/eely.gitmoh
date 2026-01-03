@@ -47,22 +47,22 @@ If no configuration is existing, _AdHoc-Mode_ is used by default.
 Switch the module `eely-base-web` from git-submodule to a local folder.
 Ensure that the local folder does already exists and contains the source code of the module.
 ```
-eely> gitmoh toLink --module=eely-base-web --commonPath=../commons/eely-base-web
+eely> eely.gitmoh toLink --module=eely-base-web --commonPath=../commons/eely-base-web
 ```
 
 Switch the module `eely-base-web` back from local folder to git-submodule.
 ```
-eely> gitmoh toSubmodule --module=eely-base-web
+eely> eely.gitmoh toSubmodule --module=eely-base-web
 ```
 
 Switch all modules from git-submodule to local folders.
 ```
-eely> gitmoh toLink --module=* --commonRoot=../commons
+eely> eely.gitmoh toLink --module=* --commonRoot=../commons
 ```
 
 Switch all modules back from local folders to git-submodule.
 ```
-eely> gitmoh toSubmodule --module=*
+eely> eely.gitmoh toSubmodule --module=*
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -71,24 +71,24 @@ eely> gitmoh toSubmodule --module=*
 
 Initialize configuration
 ```
-eely> gitmoh init
+eely> eely.gitmoh init
 ```
 You may want to edit the configuration file.
 
 Switch the module `eely-base-web` from git-submodule to a local folder.
 Ensure that the local folder does already exists and contains the source code of the module.
 ```
-eely> gitmoh toLink --module=eely-base-web
+eely> eely.gitmoh toLink --module=eely-base-web
 ```
 
 Switch the module `eely-base-web` back from local folder to git-submodule.
 ```
-eely> gitmoh toSubmodule --module=eely-base-web
+eely> eely.gitmoh toSubmodule --module=eely-base-web
 ```
 
 Switch all modules from git-submodule to local folders.
 ```
-eely> gitmoh toLink --module=*
+eely> eely.gitmoh toLink --module=*
 ```
 
 Switch all modules back from local folders to git-submodule.
@@ -111,3 +111,13 @@ eely> gitmoh toSubmodule --module=*
 Distributed under GPLv3. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## How To Build
+
+Windows binary: `dotnet publish -r win-x64 -c Release`
+Linux binary: `dotnet publish -r linux-x64 -c Release`
+
+## How To Test
+
+Under Linux you may get an error `fatal: transport 'file' not allowed`.
+In that case switch on file allowance: `git config --global protocol.file.allow always`
