@@ -1,5 +1,5 @@
 ﻿// (c) 2006 jeff.brown
-// GitMoh - (c) 2025-26 by Joerg Plenert, Voerde
+// eely.GitMoH - (c) 2025-26 by Joerg Plenert, Voerde
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.IO;

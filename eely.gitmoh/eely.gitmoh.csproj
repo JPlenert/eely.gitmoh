@@ -6,6 +6,9 @@
     <PublishAot>true</PublishAot>
     <InvariantGlobalization>true</InvariantGlobalization>
     <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <Authors>Joerg Plenert, Voerde</Authors>
+    <Copyright>(c) 2025-26 Joerg Plenert, Voerde</Copyright>
+    <PackageProjectUrl>https://eely.eu</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

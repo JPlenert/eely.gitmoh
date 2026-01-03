@@ -1,4 +1,4 @@
-﻿// GitMoh - (c) 2025 by Joerg Plenert, Voerde
+﻿// eely.GitMoH - (c) 2025-26 by Joerg Plenert, Voerde
 namespace eely.gitmoh
 {
     internal enum ModuleStatus

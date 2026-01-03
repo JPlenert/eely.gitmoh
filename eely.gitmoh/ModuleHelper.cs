@@ -1,4 +1,4 @@
-﻿// GitMoh - (c) 2025 by Joerg Plenert, Voerde
+﻿// eely.GitMoH - (c) 2025-26 by Joerg Plenert, Voerde
 using System;
 using System.IO;
 
@@ -63,8 +63,13 @@ namespace eely.gitmoh
 
             if (OperatingSystem.IsWindows())
             {
-                Console.WriteLine($" Creating link to '{_modDef.CommonDir.FullName}'");
+                Console.WriteLine($" Creating junction to '{_modDef.CommonDir.FullName}'");
                 WinJunctionPoint.Create(_modDef.SubmoduleDir.FullName, _modDef.CommonDir.FullName, true);
+            }
+            else
+            {
+                Console.WriteLine($" Creating symlink to '{_modDef.CommonDir.FullName}'");
+                Executer.Execute("ln", $"-s {_modDef.CommonDir.FullName} {_modDef.SubmoduleDir.FullName}", null);
             }
         }
 

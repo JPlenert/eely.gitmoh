@@ -1,4 +1,4 @@
-﻿// GitMoh - (c) 2025-26 by Joerg Plenert, Voerde
+﻿// eely.GitMoH - (c) 2025-26 by Joerg Plenert, Voerde
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -204,7 +204,7 @@ namespace eely.gitmoh
 
         private static void PrintHeadline()
         {
-            Console.WriteLine($"gitmoh - git MOduleHelper V{Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyFileVersionAttribute>().Version}, https://www.eely.eu");
+            Console.WriteLine($"gitMoH - git MOduleHelper V{Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyFileVersionAttribute>().Version}, https://www.eely.eu");
         }
 
         private static void PrintHelp()
