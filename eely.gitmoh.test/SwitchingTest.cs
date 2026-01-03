@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Design;
+﻿using System.IO;
 
 namespace eely.gitmoh.test
 {
@@ -152,7 +152,7 @@ namespace eely.gitmoh.test
             cfg.ModuleDict["s2"].CommonPath += "invalid";
             cfg.SaveUserGlobalConfig();
 
-            Assert.Throws<System.IO.IOException>(() => prg.Execute(["toLink", $"--path=\"{r1.FullName}\"", "--module=*", $"--commonRoot=\"{commonDir.FullName}\""]));
+            Assert.Throws<GitMohException>(() => prg.Execute(["toLink", $"--path=\"{r1.FullName}\"", "--module=*", $"--commonRoot=\"{commonDir.FullName}\""]));
         }
 
         [TestMethod]

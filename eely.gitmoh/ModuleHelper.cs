@@ -54,6 +54,9 @@ namespace eely.gitmoh
                 return;
             }
 
+            if (!Directory.Exists(_modDef.CommonDir.FullName))
+                throw new GitMohException("Unable to switch because common is not existing");
+
             _modDef.SubmoduleDir.Refresh();
             if (_modDef.SubmoduleDir.Exists)
             {
